@@ -159,7 +159,7 @@ var date = {
     year: 2022
 }
 
-console.log(getLastPalindrome(date));
+console.log(getPreviousPalindrome(date));
 console.log(getNextPalindrome(date));
 
 
