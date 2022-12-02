@@ -8,8 +8,6 @@
   
   #main-container {
     background-color: white;
-    border-radius: 1em ;
-
     display: flex;
     flex-direction: column;
     width: 40vw;
@@ -17,6 +15,7 @@
     margin-top: 2rem;
     padding: 10px;
     text-align: center;
+    box-shadow: 3px 3px rgb(175, 120, 120), -1em -1em rgb(3, 3, 3);
   }
   
   .app-title {
@@ -40,7 +39,7 @@
     margin: auto;
     margin-top: 2.5rem;
     padding: 0.5rem;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 500;
      font-weight: 300;
     border: 1px solid;

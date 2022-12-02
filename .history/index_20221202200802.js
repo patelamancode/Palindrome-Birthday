@@ -164,7 +164,7 @@ function forNearestPalindromeDate(date) {
         month: Number(dateValue[1]),
         year: Number(dateValue[0])
     }
-    if (dateInputValue == "") {
+    if (dateInputValue === "") {
         result.style.display = "flex";
         result.innerText = "Please select some inputs 🤷‍♂️🎁";
     } else {
