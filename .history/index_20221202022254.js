@@ -1,6 +1,3 @@
-var dob = document.querySelector('#selected-dob');
-var checkBtn = document.querySelector('#check-btn');
-var result = document.querySelector('#result-display');
 
 function reverseString(str) {
     return str.split("").reverse().join("");
@@ -156,43 +153,27 @@ function getLastPalindrome(date) {
     return [count, previousDate];
 }
 
-function forNearestPalindromeDate(date) {
-    let dateInputValue = dob.value;
-    let dateValue = dateInputValue.split('-');
-    var date = {
-        day: Number(dateValue[2]),
-        month: Number(dateValue[1]),
-        year: Number(dateValue[0])
-    }
-
-    let dateAsStr = dateString(date);
-    let birthdayCheck = checkPalindromesForAllDateFormats(dateAsStr);
-
-    if (birthdayCheck) {
-        result.style.display = "flex";
-        result.innerText = "Yoo !! Birthday is Palindrome.. Let's Party hard 🎉🎉";
-    } else {
-        let nextPalindromeDate = getNextPalindrome(date);
-        let lastPalindromeDate = getLastPalindrome(date);
-
-        let nextDays = nextPalindromeDate[0];
-        let nextStrDate = dateString(nextPalindromeDate[1]);
-
-        let lastDays = lastPalindromeDate[0];
-        let lastStrDate = dateString(lastPalindromeDate[1]);
-
-        // console.log(nextStrDate, lastStrDate);
-
-        if(nextDays < lastDays){
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are lagging with ${nextDays} days, and the next palindrome date is ${(nextStrDate.day)}/${(nextStrDate.month)}/${(nextStrDate.year)}, So please go and complain your parents 🤪`;
-        }
-        else{
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are leading with ${lastDays} days, and the previous palindrome date is ${(lastStrDate.day)}/${(lastStrDate.month)}/${(lastStrDate.year)}, So please go and complain your parents 🤪`;
-        }
-    }
+function forNearestPalindromeDate(date){
+    let nextPalindromeDate = getNextPalindrome(date);
+    let lastPalindromeDate = getLastPalindrome(date);
     
+    let nextValue = nextPalindromeDate[0];
+    let lastValue = lastPalindromeDate[0];
+
+    console.log(nextValue, lastValue);
+
 }
 
-checkBtn.addEventListener('click', forNearestPalindromeDate);
+var date = {
+    day: 13,
+    month: 06,
+    year: 2022
+}
+
+console.log(getLastPalindrome(date));
+console.log(getNextPalindrome(date));
+forNearestPalindromeDate(date);
+
+
+
+

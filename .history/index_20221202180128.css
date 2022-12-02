@@ -44,9 +44,3 @@
     background-color: rgb(177, 110, 240);
     border-radius: 10px;
   }
-  #result-display {
-    display: none;
-    padding-top: 1rem;
-    font-style: italic;
-    margin: auto;
-  }

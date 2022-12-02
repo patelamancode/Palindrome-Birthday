@@ -181,15 +181,14 @@ function forNearestPalindromeDate(date) {
         let lastDays = lastPalindromeDate[0];
         let lastStrDate = dateString(lastPalindromeDate[1]);
 
-        // console.log(nextStrDate, lastStrDate);
-
+        console.log(nextStrDate, lastStrDate);
+        {nextStrDate.day}
+        
         if(nextDays < lastDays){
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are lagging with ${nextDays} days, and the next palindrome date is ${(nextStrDate.day)}/${(nextStrDate.month)}/${(nextStrDate.year)}, So please go and complain your parents 🤪`;
+            console.log(`Opps !! your are lagging with ${nextDays} days, and the next palindrome date is ${nextDate} Go and complain your parents 🤪`)
         }
         else{
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are leading with ${lastDays} days, and the previous palindrome date is ${(lastStrDate.day)}/${(lastStrDate.month)}/${(lastStrDate.year)}, So please go and complain your parents 🤪`;
+            console.log(`Opps !! your are leading with ${lastDays} days, and the previous palindrome date is ${lastDate} Go and complain your parents 🤪`)
         }
     }
     

@@ -172,27 +172,30 @@ function forNearestPalindromeDate(date) {
         result.style.display = "flex";
         result.innerText = "Yoo !! Birthday is Palindrome.. Let's Party hard 🎉🎉";
     } else {
-        let nextPalindromeDate = getNextPalindrome(date);
-        let lastPalindromeDate = getLastPalindrome(date);
-
-        let nextDays = nextPalindromeDate[0];
-        let nextStrDate = dateString(nextPalindromeDate[1]);
-
-        let lastDays = lastPalindromeDate[0];
-        let lastStrDate = dateString(lastPalindromeDate[1]);
-
-        // console.log(nextStrDate, lastStrDate);
-
-        if(nextDays < lastDays){
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are lagging with ${nextDays} days, and the next palindrome date is ${(nextStrDate.day)}/${(nextStrDate.month)}/${(nextStrDate.year)}, So please go and complain your parents 🤪`;
-        }
-        else{
-            result.style.display = "flex";
-            result.innerText = `Opps !! your are leading with ${lastDays} days, and the previous palindrome date is ${(lastStrDate.day)}/${(lastStrDate.month)}/${(lastStrDate.year)}, So please go and complain your parents 🤪`;
-        }
+        console.log("need to check more")
     }
-    
+
+
+    let nextPalindromeDate = getNextPalindrome(date);
+    let lastPalindromeDate = getLastPalindrome(date);
+
+    let nextDays = nextPalindromeDate[0];
+    let nextDate = nextPalindromeDate[1];
+
+    let lastDays = lastPalindromeDate[0];
+    let lastDate = lastPalindromeDate[1];
+
+    // console.log(nextDays, nextDate, lastDays, lastDate);
+
+
+
+    // if(nextPalindromeDate[0]<lastPalindromeDate[0]){
+    //     return nextPalindromeDate[0] , nextPalindromeDate[1];
+    // }
+    // else{
+    //     return lastPalindromeDate[0], lastPalindromeDate[1];
+    // }
+
 }
 
 checkBtn.addEventListener('click', forNearestPalindromeDate);
